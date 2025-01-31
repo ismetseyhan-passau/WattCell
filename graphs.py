@@ -25,6 +25,8 @@ def generate_energy_density_data(cell, parameter, start, end, steps, anodefree):
             cell_copy.cathode.porosity = x / 100  # Convert percentage to decimal
         elif parameter == 'Cathode capacity (mAh/g)':
             cell_copy.cathode.capacity = x
+        elif parameter == 'Anode capacity (mAh/g)':
+            cell_copy.anode.capacity = x
         elif parameter == 'Cathode voltage (V)':
             cell_copy.cathode.voltage = x
         elif parameter == 'Extra mass (g)':

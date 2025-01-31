@@ -500,12 +500,16 @@ def print_cell_metrics(cell):
 
 def energy_density_graph(cell):
     st.header('Energy Density Graph')
+    # Define base list of parameters that can be varied in energy density calculations
     parameters = [
         'Cathode thickness (um)',
         'Cathode porosity (%)',
         'Cathode capacity (mAh/g)',
+        'Anode capacity (mAh/g)',
         'Cathode voltage (V)'
     ]
+
+    # Add cell format specific parameters to the beginning of the list
     if st.session_state.cell_format == 'Pouch':
         for p in [
             'Cell size (height of cathode)',
